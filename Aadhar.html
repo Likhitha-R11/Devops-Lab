@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Aadhaar – Front</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+:root{
+    --saffron:#ff9933;
+    --green:#138808;
+}
+body{
+    background:#e9ecef;
+    font-family: Arial, sans-serif;
+}
+
+.card{
+    width:900px;
+    max-width:95%;
+    height:520px;
+    background:#fff;
+    margin:40px auto;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Watermark */
+.watermark{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    font-weight:800;
+    color:rgba(255,0,0,.12);
+    transform:rotate(-25deg);
+    pointer-events:none;
+}
+
+.header {
+    background:#fff;
+    padding: 10px 16px 14px;
+    text-align: center;
+    position: relative;
+}
+
+/* Aadhaar tricolor strip */
+.header::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:6px;
+    background:linear-gradient(
+        to right,
+        var(--saffron),
+        #ffffff,
+        var(--green)
+    );
+}
+
+/* Content */
+.content{
+    display:grid;
+    grid-template-columns:180px 1fr 150px;
+    gap:20px;
+    padding:25px 30px;
+}
+
+/* Photo */
+.photo{
+    border:2px solid #000;
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    color:#777;
+}
+
+/* Details */
+.details{
+    font-size:17px;
+    line-height:1.7;
+}
+
+.details strong{
+    font-weight:600;
+}
+
+/* QR */
+.qr{
+    border:2px solid #000;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Aadhaar number */
+.aadhaar-number{
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:5px;
+    margin-top:10px;
+}
+
+/* Divider */
+.divider{
+    height:4px;
+    background:red;
+    margin:10px 25px;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="watermark">SAMPLE – NOT AADHAAR</div>
+
+    <div class="header">
+        <h1>Government of India</h1>
+        <h2>Unique Identification Authority of India</h2>
+    </div>
+
+    <div class="content">
+        <!-- Photo -->
+        <div class="photo">PHOTO</div>
+
+        <!-- Details -->
+        <div class="details">
+            <div><strong>Name:</strong> Ragam Likhitha</div>
+            <div><strong>DOB:</strong> 01/01/2000</div>
+            <div><strong>Gender:</strong> Female</div>
+        </div>
+
+        <!-- QR -->
+        <div class="qr">
+            <div id="qrcode"></div>
+        </div>
+    </div>
+
+    <div class="aadhaar-number">XXXX XXXX XXXX</div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+        आधार – आम आदमी का अधिकार
+    </div>
+
+</div>
+
+<script>
+new QRCode(document.getElementById("qrcode"),{
+    text:"SAMPLE AADHAAR | Dummy Data Only",
+    width:120,
+    height:120,
+    correctLevel:QRCode.CorrectLevel.H
+});
+</script>
+
+</body>
+</html>
+

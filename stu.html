@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Student ID Card UI</title>
+
+<style>
+:root{
+  --purple:#6a00ff;
+  --purple-dark:#4b00b5;
+  --purple-soft:#efe6ff;
+  --text:#1f2937;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f3f4f6;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Layout */
+.wrap{
+  display:flex;
+  gap:40px;
+  padding:30px;
+}
+
+/* Lanyard */
+.lanyard{
+  position:absolute;
+  top:-120px;
+  left:50%;
+  transform:translateX(-50%);
+  width:22px;
+  height:120px;
+  background:linear-gradient(180deg,var(--purple),var(--purple-dark));
+  border-radius:12px;
+}
+.lanyard::after{
+  content:"";
+  position:absolute;
+  bottom:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:30px;
+  height:14px;
+  background:#cfd3d8;
+  border-radius:4px;
+}
+
+/* Card */
+.card{
+  position:relative;
+  width:280px;
+  height:420px;
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 18px 35px rgba(0,0,0,.18);
+  overflow:hidden;
+}
+
+/* Header */
+.header{
+  position:relative;
+  height:120px;
+  background:linear-gradient(135deg,var(--purple),var(--purple-dark));
+}
+.header::after{
+  content:"";
+  position:absolute;
+  bottom:-28px; left:0; right:0;
+  height:60px;
+  background:#fff;
+  clip-path:polygon(0 0,100% 40%,100% 100%,0 100%);
+}
+
+.logo{
+  position:absolute;
+  top:14px; left:16px;
+  color:#fff;
+  font-weight:700;
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.logo-badge{
+  width:26px; height:26px;
+  border:2px solid #fff;
+  border-radius:6px;
+  display:grid; place-items:center;
+  font-size:10px;
+}
+
+/* Photo */
+.photo{
+  position:absolute;
+  left:50%;
+  bottom:-42px;
+  transform:translateX(-50%);
+  width:84px; height:84px;
+  border-radius:50%;
+  background:#1f2937;
+  border:5px solid #fff;
+  display:grid; place-items:center;
+  color:#fff; font-weight:700;
+}
+
+/* Content */
+.content{
+  padding:64px 18px 16px;
+  text-align:center;
+}
+.name{
+  font-size:18px;
+  font-weight:800;
+  color:var(--text);
+  margin:6px 0 2px;
+}
+.role{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+.details{
+  text-align:left;
+  font-size:12px;
+  line-height:1.7;
+  color:var(--text);
+}
+.details b{color:#111827}
+
+/* Accent block */
+.accent{
+  margin-top:12px;
+  padding:10px;
+  background:var(--purple-soft);
+  border-radius:10px;
+  font-size:11px;
+  color:#4b5563;
+}
+
+/* Back side */
+.back .header{
+  height:140px;
+}
+.back .header::after{
+  clip-path:polygon(0 0,100% 55%,100% 100%,0 100%);
+}
+.back .content{
+  padding:28px 18px;
+}
+.note{
+  font-size:12px;
+  color:#4b5563;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+.signature{
+  margin-top:10px;
+  font-family:cursive;
+  font-size:20px;
+  color:#111827;
+}
+.barcode{
+  margin-top:14px;
+  height:44px;
+  background:repeating-linear-gradient(
+    90deg,#111 0 2px,#fff 2px 4px
+  );
+  border-radius:6px;
+}
+.footer{
+  position:absolute;
+  bottom:14px; left:0; right:0;
+  text-align:center;
+  font-size:11px;
+  color:#6b7280;
+}
+
+/* Card holders */
+.holder{
+  position:relative;
+  padding-top:120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <!-- FRONT -->
+  <div class="holder">
+    <div class="lanyard"></div>
+    <div class="card front">
+      <div class="header">
+        <div class="logo">
+          <div class="logo-badge">LOGO</div>
+          YOUR LOGO
+        </div>
+        <div class="photo">PHOTO</div>
+      </div>
+
+      <div class="content">
+        <div class="name">JOHN SMITH</div>
+        <div class="role">STUDENT</div>
+
+        <div class="details">
+          <div><b>ID No:</b> 123456789</div>
+          <div><b>Dept:</b> Computer Science</div>
+          <div><b>Phone:</b> +00 0000 0000</div>
+          <div><b>Email:</b> student@email.com</div>
+        </div>
+
+        <div class="accent">
+          Valid for academic use only
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="holder">
+    <div class="lanyard"></div>
+    <div class="card back">
+      <div class="header">
+        <div class="logo">
+          <div class="logo-badge">LOGO</div>
+          YOUR LOGO
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="note">
+          Lorem ipsum is simply dummy text of the printing a
+

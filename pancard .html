@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PAN Card Demo</title>
+<style>
+body{
+    background:#ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pan{
+    width:430px;
+    height:270px;
+    background: linear-gradient(to bottom, #e9f2ff, #cfe0ff);
+    border:1.5px solid #000;
+    margin:40px auto;
+    padding:6px;
+    position:relative;
+}
+
+/* Header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.header .left{
+    color:#1a237e;
+}
+.header .center{
+    color:#bf360c;
+}
+.header .right{
+    color:#1b5e20;
+}
+
+/* Middle section */
+.middle{
+    display:flex;
+    margin-top:10px;
+}
+
+.photo{
+    width:85px;
+    height:95px;
+    border:1px solid #000;
+    background:#fff;
+    text-align:center;
+    line-height:95px;
+    font-size:10px;
+}
+
+.info{
+    font-size:12px;
+    margin-left:10px;
+    line-height:1.6;
+    color:#000;
+}
+
+.info b{
+    color:#0d47a1;
+}
+
+.pan-no{
+    font-size:15px;
+    font-weight:bold;
+    color:#000;
+    letter-spacing:1px;
+}
+
+/* QR */
+.qr{
+    position:absolute;
+    right:10px;
+    top:85px;
+    width:70px;
+    height:70px;
+    border:1px solid #000;
+    background:#fff;
+    text-align:center;
+    line-height:70px;
+    font-size:10px;
+}
+
+/* Bottom */
+.bottom{
+    position:absolute;
+    bottom:8px;
+    width:95%;
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:#000;
+}
+
+/* SAMPLE watermark */
+.sample{
+    position:absolute;
+    top:40%;
+    left:15%;
+    font-size:40px;
+    color:rgba(0,0,0,0.18);
+    transform:rotate(-25deg);
+    font-weight:bold;
+    pointer-events:none;
+}
+</style>
+</head>
+<body>
+
+<div class="pan">
+    <div class="sample">SAMPLE</div>
+
+    <div class="header">
+        <div class="left">
+            आयकर विभाग<br>
+            INCOME TAX DEPARTMENT
+        </div>
+        <div class="center">
+            भारत सरकार<br>
+            GOVT. OF INDIA
+        </div>
+        <div class="right">
+            स्थायी लेखा संख्या कार्ड<br>
+            PAN CARD
+        </div>
+    </div>
+
+    <div class="middle">
+        <div class="photo">PHOTO</div>
+        <div class="info">
+            Name: <b>APPLICANT NAME</b><br>
+            Father's Name: <b>FATHER NAME</b><br>
+            Date of Birth: <b>01/06/1995</b><br>
+            <div class="pan-no">ABCDE1234F</div>
+        </div>
+    </div>
+
+    <div class="qr">QR</div>
+
+    <div class="bottom">
+        <div>Signature</div>
+        <div>Issuing Authority</div>
+    </div>
+</div>
+
+</body>
+</html>
+

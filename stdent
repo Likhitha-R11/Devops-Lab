@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student ID Card Preview</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e9ecef;
+            margin: 0;
+        }
+
+        .id-card {
+            width: 350px;
+            height: 220px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #004085, #0056b3);
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .header h1 { font-size: 16px; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+        .header p { font-size: 10px; margin: 2px 0 0 0; opacity: 0.8; }
+
+        .body-content {
+            display: flex;
+            padding: 15px;
+            align-items: center;
+        }
+
+        .photo-area {
+            width: 85px;
+            height: 100px;
+            background: #f8f9fa;
+            border: 2px solid #0056b3;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Cartoon Avatar */
+        .head { width: 40px; height: 45px; background: #ffdbac; border-radius: 50% 50% 40% 40%; margin-bottom: 5px; }
+        .shirt { width: 70px; height: 30px; background: #0056b3; border-radius: 15px 15px 0 0; }
+
+        .info { margin-left: 20px; }
+        .info h2 { margin: 0 0 8px 0; font-size: 18px; color: #222; }
+        .info p { margin: 3px 0; font-size: 12px; color: #555; }
+        .info span { font-weight: bold; color: #0056b3; }
+
+        .footer {
+            margin-top: auto;
+            background: #f1f3f5;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        .barcode { font-size: 14px; letter-spacing: 1px; font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
+
+<div class="id-card">
+    <div class="header">
+        <h1>West Valley University</h1>
+        <p>Official Student Identification</p>
+    </div>
+    <div class="body-content">
+        <div class="photo-area">
+            <div class="head"></div>
+            <div class="shirt"></div>
+        </div>
+        <div class="info">
+            <h2>Alex J. Sample</h2>
+            <p><span>ID:</span> 9876-54321</p>
+            <p><span>Dept:</span> Computer Science</p>
+            <p><span>Exp:</span> 06/2028</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div>STATUS: ACTIVE</div>
+        <div class="barcode">||| || |||| || |||</div>
+    </div>
+</div>
+
+</body>
+</html>

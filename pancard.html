@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PAN Card Sample</title>
+<style>
+    body {
+        background:#f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .pan-card {
+        width: 420px;
+        height: 260px;
+        background: #e6f0ff;
+        border: 1px solid #333;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 40px auto;
+        position: relative;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .header span {
+        text-align: center;
+        width: 33%;
+    }
+
+    .content {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .photo {
+        width: 80px;
+        height: 90px;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 90px;
+        font-size: 11px;
+    }
+
+    .details {
+        margin-left: 10px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .pan-number {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        padding-right: 10px;
+    }
+
+    .sample {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        font-size: 36px;
+        color: rgba(0,0,0,0.15);
+        transform: rotate(-20deg);
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="pan-card">
+    <div class="sample">SAMPLE</div>
+
+    <div class="header">
+        <span>आयकर विभाग<br>INCOME TAX DEPARTMENT</span>
+        <span>भारत सरकार<br>GOVT. OF INDIA</span>
+        <span>स्थायी लेखा संख्या कार्ड<br>PAN CARD</span>
+    </div>
+
+    <div class="content">
+        <div class="photo">PHOTO</div>
+        <div class="details">
+            <div><strong>Name:</strong> Rahul Sharma</div>
+            <div><strong>Father's Name:</strong> Amit Sharma</div>
+            <div><strong>Date of Birth:</strong> 01/06/1995</div>
+            <div class="pan-number">ABCDE1234F</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>Signature</div>
+        <div>Issuing Authority</div>
+    </div>
+</div>
+
+</body>
+</html>
+
