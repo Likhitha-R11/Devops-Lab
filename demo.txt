@@ -1,0 +1,2 @@
+welcome to devops lab. In this lab we work on development and operations
+
